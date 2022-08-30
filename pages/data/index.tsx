@@ -72,10 +72,8 @@ export const headerList = [
   },
   {
     title: "pages",
-    items: [
-      
-    ]
-  }
+    items: [],
+  },
 ];
 
 export const footerList = [
