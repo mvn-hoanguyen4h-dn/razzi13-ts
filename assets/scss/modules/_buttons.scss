@@ -94,6 +94,7 @@
     &:after{
       width: 100%;
       left: 0;
+      bottom: 0;
       right: auto;
     }
   }
@@ -101,7 +102,7 @@
 .btn-category.active{
   color: map-get($colors, primary);
   &:after{
-    @include pxRem(bottom, -2);
+    @include pxRem(bottom, 0);
     content: "";
     position: absolute;
     left: 0;
@@ -143,6 +144,9 @@
 }
 .btn-left{
   text-align: left;
+}
+.slick-dots{
+  position: relative;
 }
 .slick-dots li button{
   @include pxRem(padding, 5);

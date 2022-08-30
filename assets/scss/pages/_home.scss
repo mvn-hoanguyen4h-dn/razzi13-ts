@@ -130,21 +130,19 @@
     @include pxRem(transform, translateY(10));
     @include pxRem(margin, 10 0);
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     top: 0;
     opacity: 0;
     width: 100%;
     transition: all .4s ease;
     &-item{
       @include pxRem(padding, 0 15);
-      position: relative;
     }
     &-wrapper{
       @include pxRem(height, 170);
       @include pxRem(margin-top, 6);
       @include pxRem(border, 1 solid map-get($colors, border-gray-light));
       width: 100%;
-      position: relative;
       transition: all .5s ease;
       &:hover{
         @include pxRem(box-shadow, 0 2 4 map-get($colors, box-shadow-dark));

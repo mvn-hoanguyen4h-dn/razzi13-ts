@@ -40,21 +40,23 @@ const SectionProducts: React.FC<{ products: ProductItemProps[] }> = ({
                 </div>
                 <Link href="#">
                   <a>
-                    <Image
-                      src={product.images[0]}
-                      className="product-img"
-                      alt="image 1"
-                      width={570}
-                      height={684}
-                    />
-                    {product.images[1] && (
+                    <span className="product-img">
                       <Image
+                        src={product.images[0]}
+                        alt="image 1"
+                        width={570}
+                        height={684}
+                      />
+                    </span>
+                    {product.images[1] && (
+                      <span className="product-img-2">
+                        <Image
                         src={product.images[1]}
-                        className="product-img-2"
                         alt="image-2"
                         width={570}
                         height={684}
                       />
+                      </span>
                     )}
                   </a>
                 </Link>
