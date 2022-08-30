@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const advertisingImg1 = require("../../../assets/images/advertising-img1.webp");
-const advertisingImg2 = require("../../../assets/images/advertising-img2.webp");
-const advertisingImg3 = require("../../../assets/images/advertising-img3.jpeg");
-const advertisingImg4 = require("../../../assets/images/advertising-img4.jpeg");
-const advertisingImg5 = require("../../../assets/images/advertising-img5.webp");
+const advertisingImg1 = require("../../assets/images/advertising-img1.webp");
+const advertisingImg2 = require("../../assets/images/advertising-img2.webp");
+const advertisingImg3 = require("../../assets/images/advertising-img3.jpeg");
+const advertisingImg4 = require("../../assets/images/advertising-img4.jpeg");
+const advertisingImg5 = require("../../assets/images/advertising-img5.webp");
 
 function SectionAdvertising() {
   return (

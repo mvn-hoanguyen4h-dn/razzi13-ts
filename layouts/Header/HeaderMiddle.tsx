@@ -1,4 +1,3 @@
-import { info } from "console";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BsHandbag } from "react-icons/bs";
@@ -7,17 +6,17 @@ import { FiHeart } from "react-icons/fi";
 function HeaderMiddle() {
   const [headerFix, setHeaderFix] = useState(false);
 
-  const setFixed = ()=>{
-    if(window.scrollY > 120){
+  const setFixed = () => {
+    if (window.scrollY > 120) {
       setHeaderFix(true);
-    }else{
+    } else {
       setHeaderFix(false);
     }
-  }
+  };
 
-  useEffect(()=>{
+  useEffect(() => {
     window.addEventListener("scroll", setFixed);
-  })
+  });
 
   return (
     <div className={"header-middle" + (headerFix ? " fixed" : "")}>

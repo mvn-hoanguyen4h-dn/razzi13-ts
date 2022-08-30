@@ -6,7 +6,7 @@ import { RiTumblrFill } from "react-icons/ri";
 import { footerList } from "../../data";
 import FooterAccordion from "./FooterAccordion";
 
-const paymentImg = require("../../../assets/images/icons_payment.webp");
+const paymentImg = require("../../assets/images/icons_payment.webp");
 
 function FooterBottom() {
   return (

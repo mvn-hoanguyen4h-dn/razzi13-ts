@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
-const babyImg3 = require("../../../assets/images/baby-img3.webp");
+const babyImg3 = require("../../assets/images/baby-img3.webp")
 
 function SectionBanner() {
   return (

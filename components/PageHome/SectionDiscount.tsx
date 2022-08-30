@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const discountLeftImg = require("../../../assets/images/discount-left-img.webp");
+const discountLeftImg = require("../../assets/images/discount-left-img.webp");
 
 function SectionDiscount() {
   return (
