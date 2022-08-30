@@ -1,0 +1,79 @@
+// === Font === //
+$font-body: 'Jost', sans-serif;
+
+// === Font Weight === //
+$font-weight: (
+  normal: 400,
+  medium: 600,
+  bold: 700
+);
+
+// == Breakpoints === //
+$breakpoints: (
+  small: 480px,
+  medium: 768px,
+  wide: 960px,
+  large: 1024px,
+  largest: 1280px
+);
+
+// === Colors === //
+$colors: (
+  primary: #ff6f61,
+  white: #fff,
+  black: #1F1F1F,
+  light-black: #333,
+  blue: #F0F5FE,
+  txt-black: #525252,
+  txt-gray-dark: #CDCDCD,
+  txt-gray: #767676,
+  txt-gray-light: #a6a6a6,
+  border-black: #333,
+  border-gray: #cdcdcd,
+  border-gray-light: #e2e2e2,
+  border-color: #cccccc,
+  bg-gray: #f5f5f5,
+  bg-gray-light: #f7f7f7,
+  bg-dark: #303030,
+  brand-html: #f2652a,
+  brand-css: #379ad7,
+  brand-js: #f1da4e,
+  brand-scss: #be5f8b,
+  brand-nodejs: #7cbe42,
+  box-shadow: rgba(0, 0, 0, 0.05),
+  box-shadow-dark: rgba(0, 0, 0, 15%),
+  icon-light: #A0A0A0,
+  cream: #fff6ea,
+  arrow-color: #909090,
+  rate-color: #F8B86D,
+  desc-color: #525252,
+  btn-slide-category: #d8d8d8,
+  btn-slide-review: #f8d2cd,
+  ads-description: #767676,
+
+);
+
+// === z-index === //
+$zindexs: (
+  dropdown: 1000,
+  sticky: 1020,
+  fixed: 1030,
+  modal-backdrop: 1040,
+  modal: 1050,
+  popover: 1060,
+  tooltip: 1070
+);
+
+// === Typography === //
+$font-size-base: 0.875rem !default; // 14px
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * .875 !default;
+
+$h-font-size: (
+  h1: $font-size-base * 2.5,
+  h2: $font-size-base * 2,
+  h3: $font-size-base * 1.75,
+  h4: $font-size-base * 1.5,
+  h5: $font-size-base * 1.25,
+  h6: $font-size-base
+);

@@ -1,0 +1,281 @@
+.page-header {
+  
+}
+.header-top{
+  @include pxRem(height, 50);
+  background-color: map-get($colors, bg-gray);
+  width: 100%;
+  z-index: 20;
+  &-wrapper{
+    @include pxRem(height, 50);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    .header-freeship{
+      @include pxRem(font-size, 11);
+      @include pxRem(letter-spacing, .22);
+      @include pxRem(margin-right, 50);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .header-freeship-icon{
+      @include pxRem(margin-right, 14);
+    }
+  }
+  &-list{
+    @include pxRem(font-size, 14);
+    @include pxRem(letter-spacing, .2);
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 500;
+  }
+  &-item{
+    position: relative;
+    height: 100%;
+    z-index: 20;
+  }
+  &-link{
+    @include pxRem(padding, 0 20);
+    @include pxRem(line-height, 20);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+  }
+  &-icon{
+    @include pxRem(margin-left, 5);
+    @include pxRem(font-size, 17.5);
+    font-weight: 500;
+  }
+  &-droplist{
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    top: 110%;
+    box-shadow: 0 2px 6px map-get($colors, box-shadow);
+    font-weight: normal;
+    letter-spacing: 0;
+    z-index: 20;
+    .header-top-dropitem{
+      @include pxRem(line-height, 21);
+    }
+    .header-top-dropitem:not(:last-child){
+        border-bottom: 1px solid map-get($colors, border-gray-light);
+    }
+  }
+  &-item:hover .header-top-droplist{
+    visibility: visible;
+    opacity: 1;
+    top: 100%;
+    transition: all .3s ease;
+  }
+  .header-currency{
+    text-transform: uppercase;
+    .header-top-dropitem{
+      a{
+        @include pxRem(padding, 13 20);
+        display: block;
+      }
+    }
+    .header-top-droplist{
+      @include pxRem(width, 80);
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      @include pxRem(height, 10);
+      @include pxRem(width, 1);
+      background-color: map-get($colors, border-gray);
+    }
+  }
+  .header-language{
+    text-transform: capitalize;
+    .header-top-droplist{
+      @include pxRem(width, 94);
+    }
+    .header-top-dropitem{
+      a{
+        @include pxRem(padding, 10 20 9 20);
+        display: block;
+      }
+    }
+  }
+  &-right{
+    @include pxRem(width, 385);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    .header-nav-list{
+      @include pxRem(font-size, 14);
+      height: 100%;
+    }
+    .header-icon-item{
+      .header-icon-link{
+        &:hover{
+          color: map-get($colors, black);
+          transition: all .5s linear;
+        }
+      }
+      &:last-child{
+        .header-icon-link{
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+.header-nav-list{
+    @include pxRem(font-size, 16);
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 500;
+    text-transform: capitalize;
+    .header-nav-item{
+      @include pxRem(padding, 8 14);
+      position: relative;
+      height: 100%;
+      &:first-child{
+        @include pxRem(padding-left, 0);
+      }
+      &:last-child{
+        padding-right: 0;
+      }
+      .header-nav-link{
+        @include pxRem(padding, 0 2);
+        @include pxRem(line-height, 20);
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        &:hover{
+          color: map-get($colors, primary);
+          transition: all .5s;
+        }
+      }
+    }
+}
+.header-icon-list{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.header-icon-item{
+  .header-icon-link{
+    @include flexCenter;
+    @include pxRem(padding, 0 10);
+    @include pxRem(font-size, 14);
+    color: map-get($colors, icon-light);
+    &:hover{
+      color: map-get($colors, black);
+      transition: all .5s linear;
+    }
+  }
+}
+.header-middle{
+  @include pxRem(height, 88);
+  background-color: map-get($colors, white);
+  &-wrapper{
+    @include pxRem(height, 88);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header-nav-list{
+      text-transform: uppercase;
+      .header-nav-link{
+        &:after{
+          @include pxRem(height, 1);
+          content: "";
+          position: absolute;
+          width: 0;
+          background-color: map-get($colors, primary);
+          bottom: 0;
+          transition: all .5s;
+        }
+        &:hover:after{
+          width: 100%;
+        }
+      }
+    }
+    .header-icon-list{
+      height: 100%;
+    }
+    .header-icon-item{
+      height: 100%;
+      .header-icon-link{
+        height: 100%;
+        color: map-get($colors, black);
+        height: 100%;
+        .header-icon{
+          @include pxRem(font-size, 18);
+        }
+      }
+      &:last-child{
+        .header-icon-link{
+          @include pxRem(padding-right, 19);
+        }
+      }
+    }
+  }
+}
+.header-middle.fixed{
+  @include pxRem(height, 66);
+  @include pxRem(box-shadow, 0 1 1 0 #f0f0f0);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  transition: all .5s;
+  .header-middle-wrapper{
+    @include pxRem(height, 66);
+  }
+}
+.header-bottom{
+  @include pxRem(height, 62);
+  background-color: map-get($colors, black);
+  &-wrapper{
+  @include pxRem(height, 62);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+  .header-nav{
+    height: 100%;
+    &-list{
+      .header-nav-link{
+        @include pxRem(letter-spacing, .02);
+        @include pxRem(padding, 3);
+        color: map-get($colors, txt-gray-dark);
+        height: 100%;
+      }
+    }
+  }
+}
+// responsive
+@media only screen and (max-width: map-get($breakpoints, wide)){
+  .header-top{
+    display: none;
+  }
+  .header-bottom{
+    display: none;
+  }
+}

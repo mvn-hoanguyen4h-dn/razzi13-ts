@@ -1,0 +1,155 @@
+.page-footer {
+  background: map-get($colors, black);
+  color: map-get($colors, white);
+  text-align: center;
+  .footer-top{
+    @include pxRem(padding, 110 0 41 0);
+    @include pxRem(letter-spacing, .1);
+    @include flexCenter;
+    flex-direction: column;
+    p{
+      @include pxRem(margin-bottom, 24);
+      @include pxRem(font-size, 16);
+      color: map-get($colors, border-gray);
+    }
+  }
+  .footer-bottom{
+    .footer-main{
+      @include pxRem(padding, 80 0 64 0);
+      text-align: left;
+    }
+    .footer-icon-list{
+      @include pxRem(margin-top, 20);
+      display: flex;
+      .footer-icon-item{
+        @include pxRem(width, 20);
+        @include pxRem(height, 20);
+      }
+      .footer-icon-link{
+        width: 100%;
+        height: 100%;
+        color: map-get($colors, border-gray);
+        svg{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .footer-icon-item{
+        &:first-child{
+        @include pxRem(margin,0 7.5 0 -7.5);
+        }
+      }
+      .footer-icon-item + .footer-icon-item{
+        @include pxRem(margin,0 7.5);
+      }
+    }
+    .footer-list{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .p-accordion.p-component.footer-accordion-list{
+      display: block;
+      display: none;
+    }
+    .footer-item{
+
+    }
+    .footer-title,
+    .p-accordion-header-link{
+      @include pxRem(font-size, 13);
+      @include pxRem(height, 35);
+      @include pxRem(padding-bottom, 16);
+      font-weight: 400;
+      text-transform: uppercase;
+      color: map-get($colors, white);
+      font-weight: 500;
+    }
+    .p-accordion-tab{
+      @include pxRem(margin-bottom, 21);
+      @include pxRem(border-bottom, 1 solid #444);
+    }
+    .p-accordion-header-link svg{
+      @include pxRem(font-size, 18);
+      position: absolute;
+      right: 0;
+    }
+    .footer-content-list{
+    }
+
+    .footer-content-item{
+      &:first-child{
+        @include pxRem(padding,0 0 4 0);
+        @include pxRem(height, 28);
+      }
+      @include pxRem(padding, 4 0);
+      @include pxRem(height, 32);
+      a,
+      p{
+        @include pxRem(font-size, 16);
+        text-transform: capitalize;
+        color: map-get($colors, border-gray);
+      }
+      a{
+        position: relative;
+        height: 100%;
+        &:hover{
+          color: map-get($colors, white);
+        }
+        &:after{
+          @include pxRem(height, 1);
+          @include pxRem(bottom, -2);
+          content: "";
+          position: absolute;
+          width: 0;
+          left: 0;
+          background-color: map-get($colors, white);
+          transition: all .5s;
+        }
+        &:hover:after{
+          width: 100%;
+        }
+      }
+    }
+    .footer-copyright{
+      @include pxRem(padding, 22 15);
+      @include pxRem(border-top, 1 solid #2b2b2b);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+// responsive
+
+@media only screen and (max-width: map-get($breakpoints, wide)){
+  .footer-copyright{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-text{
+      @include pxRem(padding, 15 0);
+    }
+    .footer-payment{
+      @include pxRem(padding, 15 0);
+    }
+  }
+}
+@media only screen and (max-width: map-get($breakpoints, medium)){
+  .page-footer{
+    .footer-bottom{
+      .footer-main{
+        padding: 0;
+      }
+      .footer-list{
+        display: none;
+      }
+      .p-accordion.p-component.footer-accordion-list{
+        @include pxRem(padding, 50 0 20 0);
+        display: block;
+      }
+    }
+  }
+}

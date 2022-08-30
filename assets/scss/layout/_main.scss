@@ -1,0 +1,49 @@
+.page-main {
+  overflow: hidden;
+}
+.heading-title{
+  @include pxRem(font-size, 36);
+  @include pxRem(line-height, 48);
+  @include pxRem(margin-bottom, 26);
+  font-weight: 500;
+  text-align: center;
+}
+.section-subtitle{
+  @include pxRem(font-size, 13);
+  @include pxRem(margin-bottom, 21);
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+}
+.section-title{
+  @include pxRem(font-size, 36);
+  @include pxRem(height, 53);
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: center;
+}
+.notice-tooltip{
+  @include flexCenter;
+  position: absolute;
+  color: map-get($colors, white);
+  text-transform: capitalize;
+  font-weight: 500;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  outline: none;
+  &:after{
+    @include pxRem(border, 5 solid transparent);
+    content: "";
+    position: absolute;
+    top: 100%;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.newsletter-title{
+  @include pxRem(font-size, 24);
+  @include pxRem(margin-bottom, 30);
+  text-transform: capitalize;
+  color: map-get($colors, white);
+}

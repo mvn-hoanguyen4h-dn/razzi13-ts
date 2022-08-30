@@ -1,0 +1,84 @@
+.accordion-item{
+  border: 1px solid map-get($colors, border);
+.accordion-header{
+  width: 100%;
+  border-bottom: 1px solid map-get($colors, border);
+  z-index: 2;
+  .accordion-button{
+    @include pxRem(padding, 16 20);
+    font-size: $font-size-base * 1.2;
+    font-weight: 500;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: map-get($colors, black);
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all .15s linear;
+    &:focus,
+    &:active{
+      border-color: #86b7fe;
+      // color: map-get($colors, bg-primary);
+      // background-color: #e7f1ff;
+      box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+    }
+  }
+  .accordion-icon{
+    font-size: $font-size-base * 2;
+    font-weight: 100;
+  }
+}
+.accordion-collapse{
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s linear;
+  .accordion-body{
+    @include pxRem(padding, 16 20);
+    max-height: 0;
+    transition: all .5s linear;
+    code{
+      color: rgb(214, 51, 132);
+      font-size: $font-size-base * .95;
+    }
+  }
+}
+}
+.accordion > .accordion-item:first-child{
+@include pxRem(border-top-left-radius,4);
+@include pxRem(border-top-right-radius,4);
+.accordion-button{
+  @include pxRem(border-top-left-radius,4);
+  @include pxRem(border-top-right-radius,4);
+  }
+}
+.accordion > .accordion-item:last-child{
+@include pxRem(border-bottom-left-radius,4);
+@include pxRem(border-bottom-right-radius,4);
+}
+.accordion-item + .accordion-item{
+border-top: none;
+}
+.accordion-collapse.show{
+max-height: 100vh;
+.accordion-body{
+  max-height: 100vh;
+}
+}
+.accordion-collapse.collapse{
+overflow: hidden;
+height: 0;
+.accordion-body{
+  max-height: 0;
+}
+}
+.accordion-button.show{
+&:focus,
+&:active{
+  color: map-get($colors, bg-primary);
+  background-color: #e7f1ff;
+  transition: all .15s linear;
+}
+}

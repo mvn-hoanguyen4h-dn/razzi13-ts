@@ -1,0 +1,161 @@
+.btn {
+  @include pxRem(padding, 0);
+  @include pxRem(font-size, 42);
+  @include pxRem(height, 42);
+  font-family: "Jost";
+  background: transparent;
+  color: map-get($colors, white);
+  line-height: 1;
+  cursor: pointer;
+  transition: background 400ms ease;
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background: map-get($colors, primary-dark);
+  }
+  &:focus {
+    outline: none;
+  }
+  &.disabled,
+  &:disabled {
+    pointer-events: none;
+    color: map-get($colors, txt-disabled);
+    border-color: map-get($colors, txt-disabled);
+    background: map-get($colors, bg-gray-light);
+  }
+}
+.btn-info{
+  @include pxRem(height, 52);
+  @include pxRem(width, 176);
+  @include pxRem(font-size, 16);
+  @include pxRem(padding, 0 37);
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  background-color: map-get($colors, white);
+  color: map-get($colors, black);
+  text-transform: capitalize;
+  .info-icon{
+    @include pxRem(margin-left, 10);
+    @include pxRem(font-size, 20);
+    font-weight: bold;
+    transition: all .3s ease;
+  }
+  &:hover .info-icon{
+    transform: translateX(3px);
+  }
+}
+.btn-underline{
+  @include pxRem(font-size, 16);
+  @include pxRem(padding, 0 15 5);
+  @include pxRem(height, 23);
+  position: relative;
+  background-color: transparent;
+  color: map-get($colors, black);
+  font-weight: 500;
+  transition: all .3s ease;
+  &:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid;
+    transform-origin: left center;
+    transition: transform .5s ease-in-out;
+  }
+  &:hover:after{
+    transform-origin: right center;
+    transform: scale(0);
+  }
+}
+.btn-category{
+  @include pxRem(padding, 0 5);
+  @include pxRem(height, 23);
+  @include pxRem(font-size, 16);
+  position: relative;
+  transition: all .4s ease;
+  color: map-get($colors, black);
+  background-color: transparent;
+  font-weight: 500;
+  &:after{
+    @include pxRem(bottom, 0);
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 0;
+    border-bottom: 1px solid map-get($colors, primary);
+    transition: all .4s ease;
+  }
+  &:hover{
+    color: map-get($colors, primary);
+    &:after{
+      width: 100%;
+      left: 0;
+      right: auto;
+    }
+  }
+}
+.btn-category.active{
+  color: map-get($colors, primary);
+  &:after{
+    @include pxRem(bottom, -2);
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-bottom: 1px solid map-get($colors, primary);
+  }
+}
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next{
+  @include pxRem(width, 42);
+  @include pxRem(height, 42);
+  background-color: transparent;
+  position: absolute;
+}
+.category-slide-icon{
+  @include pxRem(font-size, 42);
+  position: absolute;
+  color: map-get($colors, border-gray);
+  transition: all .5s;
+  &:hover{
+    color: map-get($colors, icon-light);
+  }
+}
+.slick-arrow{
+  &:before{
+    display: none;
+  }
+}
+.slick-arrow.slick-prev{
+  left: 0;
+}
+.slick-arrow.slick-next{
+  right: 0;
+}
+.btn-left,.btn-right{
+  width: 100%;
+  cursor: pointer;
+}
+.btn-left{
+  text-align: left;
+}
+.slick-dots li button{
+  @include pxRem(padding, 5);
+  @include pxRem(width, 20);
+  @include pxRem(height, 20);
+  position: relative;
+  &:before{
+    @include pxRem(font-size, 10);
+    @include pxRem(line-height, 20);
+    @include transformCenter;
+    transition: all .2s linear;
+  }
+  &:hover:before{
+    color: map-get($colors, primary);
+  }
+}
