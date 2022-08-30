@@ -53,7 +53,12 @@ export default class ReviewSlider extends Component {
                 <div className="review-content">
                   <div className="review-top">
                     <div className="review-img">
-                      <Image src={review.image} alt={review.name} />
+                      <Image
+                        src={review.image}
+                        alt={review.name}
+                        width={80}
+                        height={80}
+                      />
                     </div>
                     <div className="review-info">
                       <span className="review-category">{review.category}</span>
