@@ -1,80 +1,80 @@
-export const headerList = [
-  {
-    title: "home",
-    items: [
-      {
-        heading: "topic 1",
-        contents: [
-          { text: "Home v1 – Minimal" },
-          { text: "Home v2 – Classic" },
-          { text: "Home v3 – Fashion" },
-          { text: "Home v4 – Boxes" },
-          { text: "Home v5 – Simple" },
-          { text: "Home v6 – Asymmetric" },
-          { text: "Home v7 – Masonry" },
-          { text: "Home v8 – Landing" },
-          { text: "Home v9 – Fashion" },
-          { text: "Home v10 – Cases" },
-          { text: "Home v11 – Furniture" },
-          { text: "Home v12 – Furniture" },
-          { text: "Home v13 – Furniture" },
-        ],
-      },
-      {
-        heading: "topic 2",
-        contents: [
-          { text: "Home v14 – Furniture" },
-          { text: "Home v15 – Furniture" },
-          { text: "Home v16 – Instagram" },
-          { text: "Home v17 – Interior Decor" },
-          { text: "Home v18 – Food Store" },
-          { text: "Home v19 – Electronics" },
-          { text: "Home v20 – Parallax" },
-          { text: "Home v21 – Cosmetics" },
-          { text: "Home v22 – Full Width" },
-          { text: "Home v23 – Jewelry" },
-          { text: "Home v24 – Baby" },
-          { text: "Home v25 – Furniture" },
-          { text: "Home v26 – Pharmacy" },
-        ],
-      },
-      {
-        heading: "topic 3",
-        contents: [
-          { text: "Home v27 – Tools" },
-          { text: "Home v28 – Nails" },
-          { text: "Home v29 – Fashion Sport" },
-          { text: "Home v30 – Books" },
-          { text: "Home v31 – Grocery" },
-          { text: "Home v32 – ShoesNew", status: "new" },
-          { text: "Home v33 – Watches", status: "new" },
-        ],
-      },
-    ],
-  },
-  {
-    title: "shop",
-    items: [
-      {
-        heading: "shop layout",
-        contents: [
-          { text: "Default" },
-          { text: "Topbar" },
-          { text: "Collapse" },
-          { text: "Modal" },
-          { text: "Masonry" },
-          { text: "Columns 3" },
-          { text: "Columns 4" },
-          { text: "Columns 5" },
-        ],
-      },
-    ],
-  },
-  {
-    title: "pages",
-    items: [],
-  },
-];
+// export const headerList = [
+//   {
+//     title: "home",
+//     items: [
+//       {
+//         heading: "topic 1",
+//         contents: [
+//           { text: "Home v1 – Minimal" },
+//           { text: "Home v2 – Classic" },
+//           { text: "Home v3 – Fashion" },
+//           { text: "Home v4 – Boxes" },
+//           { text: "Home v5 – Simple" },
+//           { text: "Home v6 – Asymmetric" },
+//           { text: "Home v7 – Masonry" },
+//           { text: "Home v8 – Landing" },
+//           { text: "Home v9 – Fashion" },
+//           { text: "Home v10 – Cases" },
+//           { text: "Home v11 – Furniture" },
+//           { text: "Home v12 – Furniture" },
+//           { text: "Home v13 – Furniture" },
+//         ],
+//       },
+//       {
+//         heading: "topic 2",
+//         contents: [
+//           { text: "Home v14 – Furniture" },
+//           { text: "Home v15 – Furniture" },
+//           { text: "Home v16 – Instagram" },
+//           { text: "Home v17 – Interior Decor" },
+//           { text: "Home v18 – Food Store" },
+//           { text: "Home v19 – Electronics" },
+//           { text: "Home v20 – Parallax" },
+//           { text: "Home v21 – Cosmetics" },
+//           { text: "Home v22 – Full Width" },
+//           { text: "Home v23 – Jewelry" },
+//           { text: "Home v24 – Baby" },
+//           { text: "Home v25 – Furniture" },
+//           { text: "Home v26 – Pharmacy" },
+//         ],
+//       },
+//       {
+//         heading: "topic 3",
+//         contents: [
+//           { text: "Home v27 – Tools" },
+//           { text: "Home v28 – Nails" },
+//           { text: "Home v29 – Fashion Sport" },
+//           { text: "Home v30 – Books" },
+//           { text: "Home v31 – Grocery" },
+//           { text: "Home v32 – ShoesNew", status: "new" },
+//           { text: "Home v33 – Watches", status: "new" },
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     title: "shop",
+//     items: [
+//       {
+//         heading: "shop layout",
+//         contents: [
+//           { text: "Default" },
+//           { text: "Topbar" },
+//           { text: "Collapse" },
+//           { text: "Modal" },
+//           { text: "Masonry" },
+//           { text: "Columns 3" },
+//           { text: "Columns 4" },
+//           { text: "Columns 5" },
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     title: "pages",
+//     items: [],
+//   },
+// ];
 
 export const footerList = [
   {
