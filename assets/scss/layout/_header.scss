@@ -241,10 +241,10 @@
 .header-middle.fixed{
   @include pxRem(height, 66);
   @include pxRem(box-shadow, 0 1 1 0 #f0f0f0);
+  z-index: map-get($zindexs, fixed);
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 50;
   transition: all .5s;
   .header-middle-wrapper{
     @include pxRem(height, 66);

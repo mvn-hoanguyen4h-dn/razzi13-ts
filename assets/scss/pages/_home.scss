@@ -318,7 +318,7 @@
   .product-item:hover{
     bottom: 0;
     .product-content{
-      transform: translateY(calc(-100% + 90px));
+      transform: translateY(calc(-100% + 82px));
       transition: all .35s ease;
     }
     .product-img-2{
@@ -405,7 +405,6 @@
     }
   }
   .product-more{
-    @include pxRem(padding-bottom, 15);
     .product-color-list{
       @include pxRem(height, 40);
       @include pxRem(margin-bottom, 10);
@@ -496,6 +495,9 @@
       }
     }
   }
+  .product-more.more{
+    @include pxRem(padding-bottom, 15);
+  }
   .product-bottom{
     @include pxRem(padding-top, 20);
     .product-actions{
@@ -508,6 +510,8 @@
         @include pxRem(height, 16);
         text-transform: uppercase;
         font-weight: 500;
+        opacity: 0;
+        transition: all .35s;
         a{
           color: map-get($colors, black);
         }
@@ -569,6 +573,9 @@
       opacity: 1;
       visibility: visible;
     }
+  }
+  .product-item:hover .product-action{
+    opacity: 1;
   }
 }
 // section reviews
@@ -997,7 +1004,7 @@
         @include pxRem(height, 24);
         flex-direction: row;
         justify-content: flex-start;
-        align-items: center;
+        align-items: baseline;
         span:last-child{
           @include pxRem(padding-left, 10);
         }

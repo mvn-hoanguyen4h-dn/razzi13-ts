@@ -47,3 +47,43 @@
   text-transform: capitalize;
   color: map-get($colors, white);
 }
+.scroll-to-top{
+  @include pxRem(width, 40);
+  @include pxRem(height, 40);
+  @include pxRem(right, -40);
+  @include pxRem(bottom, 40);
+  z-index: 20;
+  position: fixed;
+  border-radius: 50%;
+  border: 1px solid map-get($colors, bg-primary);
+  color: map-get($colors, bg-primary);
+  background-color: map-get($colors, white);
+  transition: all .35s;
+  cursor: pointer;
+  .scroll-top-wrapper{
+    @include pxRem(width, 40);
+    @include pxRem(height, 40);
+    width: 100%;
+    height: 100%;
+    @include transformCenter;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .scroll-top-icon{
+      @include pxRem(font-size, 22);
+    }
+  }
+  &:hover .scroll-top-wrapper{
+    @include pxRem(width, 28);
+    @include pxRem(height, 28);
+    background-color: map-get($colors, bg-primary);
+    color: map-get($colors, white);
+    transition: all .35s;
+  }
+}
+.scroll-to-top.show{
+  @include pxRem(right, 10);
+}

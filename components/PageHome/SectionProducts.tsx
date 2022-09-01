@@ -91,7 +91,7 @@ const SectionProducts: React.FC<{ products: ProductItemProps[] }> = ({
                     )}
                   </div>
                   <div className="product-bottom">
-                    <div className="product-more">
+                    <div className={"product-more" + (product.colors|| product.options ? " more" : "")}>
                       {product.colors && (
                         <ul className="product-color-list">
                           {product.colors.map((color) => (

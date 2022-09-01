@@ -1,9 +1,11 @@
+import { useState, useEffect } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Footer from "../layouts/Footer";
 import Header from "../layouts/Header";
 import Main from "../layouts/Main";
 import { ProductItemProps } from "../modules/types";
+import { MdKeyboardArrowUp } from "react-icons/md";
 
 export const getStaticProps = async () => {
   const res = await fetch(
@@ -17,6 +19,20 @@ export const getStaticProps = async () => {
 };
 
 const Home: NextPage<{ products: ProductItemProps[] }> = ({ products }) => {
+  const [scrollTop, setScrollTop] = useState(false);
+
+  function setScrollToTop() {
+    if (window.scrollY >= 800) {
+      setScrollTop(true);
+    } else {
+      setScrollTop(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", setScrollToTop);
+  }, []);
+
   return (
     <div className="">
       <Head>
@@ -26,7 +42,12 @@ const Home: NextPage<{ products: ProductItemProps[] }> = ({ products }) => {
       </Head>
       <Header />
       <Main products={products} />
-      <Footer/>
+      <div className={"scroll-to-top" + (scrollTop ? " show" : "")}>
+        <div className="scroll-top-wrapper">
+          <MdKeyboardArrowUp className="scroll-top-icon" />
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 };
