@@ -12,7 +12,7 @@ function SectionAdvertising() {
     <div className="advertising">
       <h3 className="section-title">@razzi</h3>
       <p className="advertising-subtitle">
-        Appear, dry there darkness they’re seas, dry waters
+        Appear, dry there darkness they’re seas, dry waters.
       </p>
       <Link href="#">
         <a className="btn btn-underline">Go to Instagram</a>

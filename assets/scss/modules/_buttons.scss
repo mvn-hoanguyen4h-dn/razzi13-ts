@@ -51,6 +51,7 @@
   @include pxRem(font-size, 16);
   @include pxRem(padding, 0 15 5);
   @include pxRem(height, 23);
+  @include pxRem(letter-spacing, .0005);
   position: relative;
   background-color: transparent;
   color: map-get($colors, black);
@@ -64,7 +65,7 @@
     bottom: 0;
     border-bottom: 1px solid;
     transform-origin: left center;
-    transition: transform .5s ease-in-out;
+    transition: transform .2s ease-in-out;
   }
   &:hover:after{
     transform-origin: right center;

@@ -14,7 +14,7 @@ function FooterBottom() {
       <div className="footer-main">
         <div className="container">
           <ul className="row footer-content">
-            <li className="col-12 col-small-12 col-medium-3 col-large-3 col-largest-3">
+            <li className="col-12 col-small-12 col-medium-4 col-large-4 col-largest-3">
               <Link href="#">
                 <a className="logo-brand">
                   <svg
@@ -62,7 +62,7 @@ function FooterBottom() {
                 </li>
               </ul>
             </li>
-            <li className="col-12 col-small-12 col-medium-9 col-large-9 col-largest-9">
+            <li className="col-12 col-small-12 col-medium-8 col-large-8 col-largest-9">
               <ul className="footer-list">
                 {footerList.map((item) => (
                   <li key={item.id} className="footer-item">

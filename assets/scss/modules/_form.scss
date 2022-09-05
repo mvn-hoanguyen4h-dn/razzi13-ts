@@ -41,6 +41,7 @@ input {
   &::-ms-reveal {
     display: none;
   }
+  color: map-get($colors, white);
 }
 
 // Prevent resize horizontal
@@ -60,12 +61,12 @@ label {
 }
 
 .form-search{
-  @include pxRem(padding, 0 10);
+  @include pxRem(padding, 0 0 0 10);
   height: 100%;
   position: relative;
   .search-input{
     @include pxRem(padding, 12 25);
-    @include pxRem(width, 368);
+    @include pxRem(width, 370);
     @include pxRem(font-size, 15);
     height: 100%;
     background-color: map-get($colors, bg-dark);
@@ -73,22 +74,27 @@ label {
     outline: none;
     caret-color: map-get($colors, white);
     &::placeholder{
-      @include pxRem(letter-spacing, -0.6);
+    @include pxRem(font-size, 15);
       font-family: "Jost";
+      color: #909090;
     }
   }
   .btn-search{
     @include pxRem(width, 62);
-    @include pxRem(right, 10);
+    @include pxRem(right, 25);
     @include pxRem(font-size, 20);
     height: 100%;
     color: map-get($colors, white);
-    display: block;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     border-radius: none;
     background-color: transparent;
+    .search-icon{
+    }
   }
 }
 
@@ -113,11 +119,29 @@ label {
     @include pxRem(caret-size, 24);
     flex: 1;
     background-color: map-get($colors, bg-dark);
+    color: map-get($colors, white);
   }
   input[type="submit"]{
     @include pxRem(padding, 0 35);
     @include pxRem(width, 140);
     @include pxRem(margin-left, 5);
     background-color: map-get($colors, txt-black);
+  }
+}
+
+@media only screen and (max-width: map-get($breakpoints, small)){
+  .newsletter-form{
+    @include pxRem(padding, 0 15);
+    @include pxRem(height, 120);
+    flex-direction: column;
+    width: 100%;
+    input[type="email"]{
+      width: 100%;
+      text-align: center;
+    }
+    input[type="submit"]{
+      @include pxRem(margin, 10 0 0 0);
+      width: 100%;
+    }
   }
 }

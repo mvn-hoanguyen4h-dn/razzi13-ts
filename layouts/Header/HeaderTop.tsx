@@ -33,7 +33,7 @@ function HeaderTop() {
                 <Link href="#">
                   <a className="header-top-link">
                     usd
-                    <MdOutlineKeyboardArrowDown className="header-top-icon" />
+                      <MdOutlineKeyboardArrowDown className="header-top-icon" />
                   </a>
                 </Link>
                 <ul className="header-top-droplist">

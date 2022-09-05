@@ -5,20 +5,18 @@
   @include pxRem(height, 50);
   background-color: map-get($colors, bg-gray);
   width: 100%;
-  z-index: 100000;
+  z-index: 20;
   &-wrapper{
     @include pxRem(height, 50);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100000;
   }
   &-left{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     height: 100%;
-    z-index: 100000;
     .header-freeship{
       @include pxRem(font-size, 11);
       @include pxRem(letter-spacing, .22);
@@ -28,6 +26,7 @@
       align-items: center;
       text-transform: uppercase;
       font-weight: 500;
+      color: map-get($colors, txt-dark);
     }
     .header-freeship-icon{
       @include pxRem(margin-right, 14);
@@ -35,7 +34,7 @@
   }
   &-list{
     @include pxRem(font-size, 14);
-    @include pxRem(letter-spacing, .2);
+    @include pxRem(letter-spacing, .001);
     height: 100%;
     display: flex;
     justify-content: flex-start;
@@ -45,6 +44,7 @@
   &-item{
     position: relative;
     height: 100%;
+    z-index: 20;
   }
   &-link{
     @include pxRem(padding, 0 20);
@@ -54,10 +54,14 @@
     transform: translateY(-50%);
     display: flex;
     align-items: center;
+    color: map-get($colors, txt-dark);
   }
   &-icon{
-    @include pxRem(margin-left, 5);
-    @include pxRem(font-size, 17.5);
+    @include pxRem(margin-left, 7);
+    @include pxRem(font-size, 17);
+    @include pxRem(top, -1);
+    @include flexCenter;
+    position: relative;
     font-weight: 500;
   }
   &-droplist{
@@ -68,6 +72,7 @@
     box-shadow: 0 2px 6px map-get($colors, box-shadow);
     font-weight: normal;
     letter-spacing: 0;
+    z-index: 20;
     .header-top-dropitem{
       @include pxRem(line-height, 21);
     }
@@ -79,7 +84,6 @@
     visibility: visible;
     opacity: 1;
     top: 100%;
-    z-index: 100000;
     transition: all .3s ease;
   }
   .header-currency{
@@ -151,6 +155,7 @@
     text-transform: capitalize;
     .header-nav-item{
       @include pxRem(padding, 8 14);
+      @include pxRem(letter-spacing, .01);
       position: relative;
       height: 100%;
       &:first-child{
@@ -167,6 +172,7 @@
         position: relative;
         top: 50%;
         transform: translateY(-50%);
+        color: map-get($colors, txt-dark);
         &:hover{
           color: map-get($colors, primary);
           transition: all .5s;
@@ -183,26 +189,41 @@
   .header-icon-link{
     @include flexCenter;
     @include pxRem(padding, 0 10);
-    @include pxRem(font-size, 14);
+    @include pxRem(width, 34);
+    @include pxRem(height, 16);
+    @include pxRem(font-size, 13);
     color: map-get($colors, icon-light);
+    position: relative;
     &:hover{
       color: map-get($colors, black);
       transition: all .5s linear;
     }
   }
+  &:last-child{
+    .header-icon-link{
+      @include pxRem(padding, 0 0 0 10);
+      @include pxRem(width, 24);
+    }
+  }
 }
 .header-middle{
-  @include pxRem(height, 88);
+  @include pxRem(height, 90);
   background-color: map-get($colors, white);
   &-wrapper{
-    @include pxRem(height, 88);
+    @include pxRem(height, 90);
     text-transform: uppercase;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    .logo-brand{
+      @include pxRem(margin-left, -115);
+    }
     .header-nav-list{
       text-transform: uppercase;
       .header-nav-link{
+        @include pxRem(padding, 3);
+        color: map-get($colors, txt-dark);
         &:after{
           @include pxRem(height, 1);
           content: "";
@@ -223,16 +244,18 @@
     .header-icon-item{
       height: 100%;
       .header-icon-link{
+        @include pxRem(width, 38);
+        @include pxRem(font-size, 18);
         height: 100%;
         color: map-get($colors, black);
         height: 100%;
         .header-icon{
-          @include pxRem(font-size, 18);
         }
       }
       &:last-child{
         .header-icon-link{
-          @include pxRem(padding-right, 19);
+          @include pxRem(padding,0 9 0 10);
+          @include pxRem(width, 37);
         }
       }
     }
@@ -248,10 +271,12 @@
   transition: all .5s;
   .header-middle-wrapper{
     @include pxRem(height, 66);
+    transition: all .5s;
   }
 }
 .header-bottom{
-  @include pxRem(height, 62);
+  @include pxRem(height, 64);
+  @include pxRem(border, 1 solid map-get($colors, black));
   background-color: map-get($colors, black);
   &-wrapper{
   @include pxRem(height, 62);

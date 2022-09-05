@@ -8,6 +8,7 @@
     @include flexCenter;
     flex-direction: column;
     p{
+      @include pxRem(letter-spacing, .005);
       @include pxRem(margin-bottom, 24);
       @include pxRem(font-size, 16);
       color: map-get($colors, border-gray);
@@ -53,9 +54,6 @@
       display: block;
       display: none;
     }
-    .footer-item{
-
-    }
     .footer-title,
     .p-accordion-header-link{
       @include pxRem(font-size, 13);
@@ -87,6 +85,7 @@
       @include pxRem(height, 32);
       a,
       p{
+        @include pxRem(letter-spacing, .135);
         @include pxRem(font-size, 16);
         text-transform: capitalize;
         color: map-get($colors, border-gray);
@@ -125,6 +124,17 @@
 // responsive
 
 @media only screen and (max-width: map-get($breakpoints, wide)){
+  .page-footer{
+    .footer-bottom{
+      .footer-list{
+        .footer-item{
+          @include pxRem(min-width, 289);
+          @include pxRem(height, 178);
+          @include pxRem(margin-bottom, 20);
+        }
+      }
+    }
+  }
   .footer-copyright{
     flex-direction: column;
     justify-content: center;

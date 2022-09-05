@@ -74,6 +74,7 @@
   &-info{
     @include pxRem(width, 336);
     @include pxRem(font-size, 18);
+    @include pxRem(letter-spacing, .0005);
     @include transformCenter;
     text-align: center;
     position: relative;
@@ -150,6 +151,7 @@
     }
     &-link{
       @include pxRem(padding, 15);
+      color: map-get($colors, txt-dark);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -195,14 +197,15 @@
   background-position: 0% 100%;
   background-color: map-get($colors, blue);
   .discount{
-    @include pxRem(padding, 90 0);
-    @include pxRem(height, 689);
     background: url("../../images/discount-top.png") no-repeat;
     background-position: 100% -50%;
     background-size: auto;
-    position: relative;
+    &-all{
+      @include pxRem(padding, 90 0);
+      @include pxRem(height, 689);
+      position: relative;
+    }
     &-wrapper{
-      @include pxRem(margin, 0 45);
       @include pxRem(height, 509);
       top: 50%;
       transform: translateY(-50%);
@@ -229,7 +232,7 @@
       width: 47%;
       text-align: center;
       &-wrapper{
-        @include pxRem(letter-spacing, .1);
+        @include pxRem(letter-spacing, .005);
         @include flexCenter;
         flex-direction: column;
         h2{
@@ -242,7 +245,7 @@
           text-align: center;
         }
         p{
-          @include pxRem(width, 340);
+          @include pxRem(width, 320);
           @include pxRem(font-size, 18);
           @include pxRem(height, 81);
           @include pxRem(line-height, 27);
@@ -370,6 +373,7 @@
     }
     .product-name{
       @include pxRem(font-size, 16);
+      @include pxRem(line-height, 21.27);
       @include pxRem(margin-bottom, 3);
       font-weight: 500;
       a{
@@ -582,11 +586,11 @@
 .reviews{
   @include pxRem(height, 697);
   @include pxRem(padding, 94 0 77 0);
-  background: url("../../images/reviews-bg.png") no-repeat;
-  background-size: cover;
+  background: url("../../images/reviews-bg.png");
   width: 100%;
   color: map-get($colors, white);
   .review-slider{
+    @include pxRem(margin, 15 0);
     @include pxRem(padding-top, 60);
     overflow: hidden;
     .slick-slider{
@@ -600,7 +604,7 @@
       color: map-get($colors, black);
     }
     .review-content{
-      @include pxRem(height, 288);
+      @include pxRem(height, 312);
       @include pxRem(border, 1 solid map-get($colors, white));
       @include pxRem(padding, 30 30 22 30);
       width: 100%;
@@ -654,6 +658,7 @@
     }
     .review-desc{
       @include pxRem(font-size, 16);
+      @include pxRem(letter-spacing, .01);
       @include pxRem(margin-bottom, 15);
       @include pxRem(line-height, 24);
       color: map-get($colors, desc-color);
@@ -689,6 +694,7 @@
   @include pxRem(padding-top, 108);
   text-align: center;
   &-subtitle{
+    @include pxRem(letter-spacing, .01);
     @include pxRem(margin, 5 0 38 0);
     @include pxRem(font-size, 18);
     color: map-get($colors, txt-black);
@@ -889,6 +895,13 @@
         .product-content{
           transform: translateY(calc(-100% + 90px));
         }
+      }
+    }
+  }
+  .reviews{
+    .review-slider{
+      .review-content{
+        @include pxRem(height, 288);
       }
     }
   }

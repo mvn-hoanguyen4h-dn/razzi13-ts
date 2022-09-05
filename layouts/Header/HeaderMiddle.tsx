@@ -7,7 +7,7 @@ function HeaderMiddle() {
   const [headerFix, setHeaderFix] = useState(false);
 
   const setFixed = () => {
-    if (window.scrollY > 120) {
+    if (window.scrollY > 160) {
       setHeaderFix(true);
     } else {
       setHeaderFix(false);
