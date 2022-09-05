@@ -113,6 +113,7 @@
     }
     .footer-copyright{
       @include pxRem(padding, 22 15);
+      @include pxRem(line-height, 22);
       @include pxRem(border-top, 1 solid #2b2b2b);
       display: flex;
       justify-content: space-between;
@@ -140,6 +141,7 @@
     justify-content: center;
     align-items: center;
     &-text{
+      @include pxRem(line-height, 21);
       @include pxRem(padding, 15 0);
     }
     .footer-payment{
@@ -160,6 +162,14 @@
         @include pxRem(padding, 50 0 20 0);
         display: block;
       }
+    }
+  }
+  .footer-copyright{
+    &-text{
+      @include pxRem(padding, 5 0);
+    }
+    .footer-payment{
+      @include pxRem(padding, 5 0);
     }
   }
 }

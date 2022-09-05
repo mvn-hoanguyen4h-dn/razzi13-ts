@@ -584,17 +584,19 @@
 }
 // section reviews
 .reviews{
-  @include pxRem(height, 697);
+  @include pxRem(height, 745);
   @include pxRem(padding, 94 0 77 0);
   background: url("../../images/reviews-bg.png");
   width: 100%;
   color: map-get($colors, white);
+  .section-subtitle{
+    @include pxRem(margin-top, 15);
+  }
   .review-slider{
-    @include pxRem(margin, 15 0);
     @include pxRem(padding-top, 60);
     overflow: hidden;
     .slick-slider{
-      @include pxRem(height, 344);
+      @include pxRem(height, 390);
       .slick-list{
         @include pxRem(margin, 0 -15);
       }
@@ -871,8 +873,10 @@
     @include pxRem(height, 632);
     background-position: 0% 500%;
     .discount{
-      @include pxRem(height, 632);
       background-position: -100% 0;
+      &-all{
+        @include pxRem(height, 632);
+      }
       &-wrapper{
         @include pxRem(height, 452);
         margin: 0;
@@ -899,7 +903,11 @@
     }
   }
   .reviews{
+    @include pxRem(height, 698);
     .review-slider{
+      .slick-slider{
+        @include pxRem(height, 346);
+      }
       .review-content{
         @include pxRem(height, 288);
       }
@@ -934,19 +942,14 @@
       @include pxRem(background-size, 100% 408);
     }
 }
-  .discount{
-    @include pxRem(height, 604);
-    background-position: -100% 0;
-    &-wrapper{
-      @include pxRem(height, 423);
-    }
-  }
   .section-discount{
     @include pxRem(height, 603);
     background-position: 0% 500%;
     .discount{
-      @include pxRem(height, 603);
       background-position: -100% 0;
+      &-all{
+        @include pxRem(height, 603);
+      }
       &-wrapper{
         @include pxRem(height, 423);
         margin: 0;
@@ -1140,24 +1143,29 @@
     }
 }
   .category{
-    .category{
+    @include pxRem(padding, 45 0 55 0);
+    @include pxRem(height, 459);
       &-wrapper{
         @include pxRem(margin, 6 -7.5 0 -7.5);
       }
-    }
     &-slide{
       &-item{
         @include pxRem(padding, 0 7.5);
       }
     } 
+    .slick-slider{
+      @include pxRem(height, 230);
+    }
   }
   .section-discount{
     @include pxRem(height, 968);
     background-position: 0% 200%;
     .discount{
-      @include pxRem(height, 968);
-      @include pxRem(padding, 60 0 50 0);
       background-position: 0% 0%;
+      &-all{
+        @include pxRem(height, 968);
+        @include pxRem(padding, 60 0 50 0);
+      }
       &-wrapper{
         @include pxRem(height, 858);
         flex-direction: column;
@@ -1207,6 +1215,24 @@
       }
     }
   }
+  .reviews{
+    @include pxRem(height, 526);
+    @include pxRem(padding, 50 0 30 0);
+    .section-title{
+      @include pxRem(font-size, 28);
+      @include pxRem(height, 41);
+    }
+    .review-slider{
+      @include pxRem(padding-top, 28);
+      .slick-slider{
+        @include pxRem(height, 305);
+      }
+      .review-content{
+        @include pxRem(height, 252);
+        @include pxRem(padding, 20);
+      }
+    }
+    }
   .advertising{
     @include pxRem(padding-top, 60);
     &-list{
@@ -1268,8 +1294,10 @@
   .section-discount{
     @include pxRem(max-height, 906);
     .discount{
-      @include pxRem(max-height, 906);
       background-position: 0% 0%;
+      &-all{
+        @include pxRem(max-height, 906);
+      }
       &-wrapper{
         @include pxRem(max-height, 796);
       }
@@ -1308,6 +1336,16 @@
       .product-img,
       .product-img-2{
         @include pxRem(max-height, 260);
+      }
+    }
+  }
+  .reviews{
+    .review-slider{
+      .slick-slider{
+        @include pxRem(height, 319);
+      }
+      .review-content{
+        @include pxRem(height, 266);
       }
     }
   }
